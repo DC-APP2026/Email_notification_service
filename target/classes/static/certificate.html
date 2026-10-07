@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Certificate Email</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Certificate Email</h1>
+
+        <p>
+            Generate and send a certificate
+            to a trainee
+        </p>
+
+    </header>
+
+
+    <main class="form-container">
+
+        <div class="form-group">
+
+            <label for="traineeId">
+                Trainee ID
+            </label>
+
+            <input
+                type="text"
+                id="traineeId"
+                placeholder="Example: TRN001"
+                autocomplete="off">
+
+            <div
+                id="statusMessage"
+                class="status-message">
+            </div>
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                onclick="goBack()">
+
+                Back
+
+            </button>
+
+
+            <button
+                type="button"
+                class="primary-button"
+                onclick="sendCertificate()">
+
+                Generate &amp; Send Certificate
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

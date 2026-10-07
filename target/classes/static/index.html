@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Email Template Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Email Template Manager</h1>
+        <p>Select an email template to continue</p>
+    </header>
+
+
+    <main class="container">
+
+        <div class="template-grid">
+
+            <!-- OTP -->
+            <div class="template-card">
+
+                
+
+                <h2>OTP Email</h2>
+
+                <p>
+                    Send a one-time password for
+                    user verification.
+                </p>
+
+                <button onclick="selectTemplate('otp')">
+                    Use Template
+                </button>
+
+            </div>
+
+
+            <!-- Welcome -->
+            <div class="template-card">
+
+
+                <h2>Welcome Email</h2>
+
+                <p>
+                    Send a welcome message to
+                    newly registered users.
+                </p>
+
+                <button onclick="selectTemplate('welcome')">
+                    Use Template
+                </button>
+
+            </div>
+
+
+            <!-- Certificate -->
+            <div class="template-card">
+
+                <h2>Certificate Email</h2>
+
+                <p>
+                    Send an email with a certificate
+                    as an attachment.
+                </p>
+
+                <button onclick="selectTemplate('certificate')">
+                    Use Template
+                </button>
+
+            </div>
+
+
+            <!-- Custom -->
+            <div class="template-card custom-card">
+
+
+                <h2>Custom Template</h2>
+
+                <p>
+                    Create your own email template
+                    using customizable parameters.
+                </p>
+
+                <button onclick="selectTemplate('custom')">
+                    Create Template
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

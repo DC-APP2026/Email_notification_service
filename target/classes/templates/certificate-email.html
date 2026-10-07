@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Training Certificate</title>
+</head>
+
+<body>
+
+    <h2>Training Certificate</h2>
+
+    <p>
+        Dear <span th:text="${traineeName}"></span>,
+    </p>
+
+    <p>
+        Congratulations on successfully completing your
+        training program
+        <strong th:text="${courseName}"></strong>.
+    </p>
+
+    <p>
+        Please find your training certificate attached
+        to this email.
+    </p>
+
+    <p>
+        Regards,<br>
+        Training Institute
+    </p>
+
+</body>
+
+</html>

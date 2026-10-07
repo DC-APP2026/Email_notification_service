@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Custom Email</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Create Custom Email</h1>
+
+        <p>
+            Create and send a customized email
+        </p>
+
+    </header>
+
+
+    <main class="form-container">
+
+
+        <!-- Trainee ID -->
+
+        <div class="form-group">
+
+            <label for="traineeId">
+                Trainee ID
+            </label>
+
+            <input
+                type="text"
+                id="traineeId"
+                placeholder="Enter Trainee ID (Example: TRN001)"
+                required>
+
+        </div>
+
+
+        <!-- Email Subject -->
+
+        <div class="form-group">
+
+            <label for="subject">
+                Email Subject
+            </label>
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Enter email subject"
+                required>
+
+        </div>
+
+
+        <!-- Email Message -->
+
+        <div class="form-group">
+
+            <label for="message">
+                Email Message
+            </label>
+
+            <textarea
+                id="message"
+                rows="12"
+                placeholder="Write your email message here..."
+                required></textarea>
+
+        </div>
+
+
+        <!-- Available Variables -->
+
+        <div class="variables-section">
+
+            <h3>Available Variables</h3>
+
+            <p>
+                You can use these variables in your email.
+                They will automatically be replaced with
+                trainee details from Excel.
+            </p>
+
+            <div class="variables">
+
+                <button type="button"
+                        onclick="insertVariable('{{traineeId}}')">
+                    {{traineeId}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{traineeName}}')">
+                    {{traineeName}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{course}}')">
+                    {{course}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{trainerName}}')">
+                    {{trainerName}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{trainerId}}')">
+                    {{trainerId}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{startDate}}')">
+                    {{startDate}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{completionDate}}')">
+                    {{completionDate}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{duration}}')">
+                    {{duration}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{adminName}}')">
+                    {{adminName}}
+                </button>
+
+                <button type="button"
+                        onclick="insertVariable('{{email}}')">
+                    {{email}}
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Preview -->
+
+        <div class="preview-section">
+
+            <h3>Preview</h3>
+
+            <div id="preview">
+
+                Your email preview will appear here.
+
+            </div>
+
+        </div>
+
+
+        <!-- Actions -->
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                onclick="goBack()">
+                Back
+            </button>
+
+            <button
+                type="button"
+                class="secondary-button"
+                onclick="previewTemplate()">
+                Preview
+            </button>
+
+            <button
+                type="button"
+                class="primary-button"
+                onclick="sendCustomEmail()">
+                Send Email
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
